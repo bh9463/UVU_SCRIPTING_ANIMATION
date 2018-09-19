@@ -1,0 +1,6 @@
+public variable : function {
+    public float JumpHeight;
+    public int MoveSpeed;
+    public bool Floor; 
+
+}
