@@ -1,4 +1,4 @@
-public variable : function {
+public class : var_func {
     public float JumpHeight;
     public int MoveSpeed;
     public bool Floor; 
