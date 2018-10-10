@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level1Manager : MonoBehaviour {
 
 	public GameObject CurrentCheckPoint;
-	private Rigidbody2D Player;
+	public Rigidbody2D Player;
 
 	//Death and respawn animation effect
 	public GameObject DeathParticle;
@@ -23,7 +23,7 @@ public class Level1Manager : MonoBehaviour {
 
 	//Beginning of game, happens once
 	void Start () {
-		player = FindObjectOfType<Rigidbody2D> ();
+		//player = FindObjectOfType<Rigidbody2D> ();
 	}
 	//Co Routine means a cycle that can happen multiple times that is activated multiple times by the player 
 	//for example, you won't have a respawn timer unless you die. When you die, you have the same amount of time
@@ -36,18 +36,28 @@ public class Level1Manager : MonoBehaviour {
 		//instantiate is used to initiate effects or triggers
 		//Generate Death Particle
 		//This allows for the effect to happen wherever the character dies
-		Instantiate (deathParticle, player.transform.position, player.transform.rotation);
+		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		//Hide Player
-		player.enabled = false;
-		player.GetComponent<Renderer> ().enabled = false;
+		//player.enabled = false;
+		Player.GetComponent<Renderer> ().enabled = false;
 		//This is the Store Gravity in use, resetting the gravity
-		gravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
-		player.GetComponent<Rigidbody2D>().gravityScale = 0f;
-		player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
+		Player.GetComponent<Rigidbody2D>().gravityScale = 0f;
+		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		//Point Death Penalty
-		ScoreManager.addPoints(-pointPenaltyOnDeath);
+		ScoreManager.AddPoints(-PointPenaltyOnDeath);
 		//Respawn Text Message on screen
 		Debug.Log("Player Respawn");
+		//Respawn dealay timer
+		yield return new WaitForSeconds (RespawnDelay);
+		//gavity restore
+		Player.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
+		//take player back to last checkpoint
+		Player.transform.position = CurrentCheckPoint.transform.position;
+
+		Player.GetComponent<Renderer> ().enabled = true;
+		//spawn particle effect initiate
+		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 
 	}
 }
