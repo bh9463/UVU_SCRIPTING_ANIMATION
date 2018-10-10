@@ -811,10 +811,11 @@ GameObject:
   - component: {fileID: 1740637502}
   - component: {fileID: 1740637504}
   - component: {fileID: 1740637505}
+  - component: {fileID: 1740637506}
   m_Layer: 0
   m_Name: coin
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -903,6 +904,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1740637506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740637501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de8e46af6519bb4bb0a7bad05463397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weather: Sunny
 --- !u!1 &1984602460
 GameObject:
   m_ObjectHideFlags: 0
