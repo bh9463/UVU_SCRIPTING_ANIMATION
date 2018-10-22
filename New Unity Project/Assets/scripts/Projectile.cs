@@ -22,6 +22,18 @@ public class Projectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2d>().velocity.y);
+		}
+
+		void OnTriggerEnter2D(Collider2D other){
+			if(other.tag == "Enemy"){
+				Instantiate(EnemyDeath, other.transform.position, other.transform.roatation);
+				Destroy (other.gameObject);
+				ScoreManager.AddPoints (PointsForKill);
+			}
+
+
+			Instantiate(ProjectileParticle, transform.position, transform.roatation);
+			Destroy(gameObject);
+		}
 }
