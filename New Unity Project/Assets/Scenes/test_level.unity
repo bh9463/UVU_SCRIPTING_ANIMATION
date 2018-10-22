@@ -4883,7 +4883,7 @@ GameObject:
   - component: {fileID: 331840313}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5163,7 +5163,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5171,7 +5171,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &412069267
 Transform:
@@ -5520,6 +5520,7 @@ GameObject:
   - component: {fileID: 1123407004}
   - component: {fileID: 1123407003}
   - component: {fileID: 1123407002}
+  - component: {fileID: 1123407006}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -5620,6 +5621,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123407006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123407001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655dd1284060a7249b387664eeb73987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 10
+  PC: {fileID: 2129131984}
+  EnemyDeath: {fileID: 331840306}
+  ProjectileParticle: {fileID: 0}
+  PointsForKill: 5
 --- !u!1 &1174994842
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,7 +5908,7 @@ Transform:
   m_GameObject: {fileID: 1307686509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.99, y: 6.34, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.68853295, y: 0.6885329, z: 0.6885329}
   m_Children: []
   m_Father: {fileID: 2129131983}
   m_RootOrder: 1
@@ -6048,7 +6065,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6056,7 +6073,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &1489485461
 Transform:
@@ -11176,8 +11193,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2129131981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: -4.44, z: 0}
-  m_LocalScale: {x: 0.2342423, y: 0.2342423, z: 0.04684846}
+  m_LocalPosition: {x: -9, y: -3.8564, z: 0}
+  m_LocalScale: {x: 0.09644126, y: 0.09644126, z: 0.019288251}
   m_Children:
   - {fileID: 271633133}
   - {fileID: 1307686510}

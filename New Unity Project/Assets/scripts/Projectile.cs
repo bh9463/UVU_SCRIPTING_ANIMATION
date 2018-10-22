@@ -22,18 +22,18 @@ public class Projectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2d>().velocity.y);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
 		}
-
+		// This is the Instantiate for when the projectile hits the enemy, dissolves the projectile and applies the "AddPoints" code thus, giving you points for killing the enemy
 		void OnTriggerEnter2D(Collider2D other){
 			if(other.tag == "Enemy"){
-				Instantiate(EnemyDeath, other.transform.position, other.transform.roatation);
+				Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
 				Destroy (other.gameObject);
 				ScoreManager.AddPoints (PointsForKill);
 			}
 
-
-			Instantiate(ProjectileParticle, transform.position, transform.roatation);
+			// This is the particle and death effect for the projectile itself for any instance. 
+			Instantiate(ProjectileParticle, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 }
