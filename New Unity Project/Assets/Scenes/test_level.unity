@@ -4850,7 +4850,7 @@ GameObject:
   m_Layer: 0
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4902,7 +4902,7 @@ MonoBehaviour:
   MoveSpeed: 2
   MoveRight: 0
   WallCheck: {fileID: 320320650}
-  WallCheckRadius: 0.2
+  WallCheckRadius: 0.1
   WhatIsWall:
     serializedVersion: 2
     m_Bits: 768
@@ -4926,7 +4926,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &331840309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5029,7 +5029,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 331840306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.69, y: -3.457, z: -0.119140625}
+  m_LocalPosition: {x: 5.69, y: -3.765, z: -0.119140625}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 320320650}
@@ -5912,7 +5912,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1489485459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.41, y: -2.71, z: 0.083984375}
+  m_LocalPosition: {x: 3.41, y: -2.63, z: 0.083984375}
   m_LocalScale: {x: 4.194893, y: 23.753588, z: 4.1948915}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10687,7 +10687,7 @@ GameObject:
   m_Layer: 0
   m_Name: EdgeCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
