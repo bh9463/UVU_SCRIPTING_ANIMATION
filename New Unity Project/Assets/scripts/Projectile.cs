@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
 	public float Speed;
-	public Rigidbody2D PC;
+	public Rigidbody2D Jimmy;
 
 	public GameObject EnemyDeath;
 
@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		if(PC.transform.localScale.x < 0)
+		if(Jimmy.transform.localScale.x < 0)
 			Speed = -Speed;
 	}
 	
@@ -34,6 +34,8 @@ public class Projectile : MonoBehaviour {
 
 			// This is the particle and death effect for the projectile itself for any instance. 
 			Instantiate(ProjectileParticle, transform.position, transform.rotation);
-			Destroy(gameObject);
+			Destroy (gameObject);
 		}
+	
 }
+

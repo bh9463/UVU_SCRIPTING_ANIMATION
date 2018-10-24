@@ -4900,7 +4900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 2
-  MoveRight: 0
+  MoveRight: 1
   WallCheck: {fileID: 320320650}
   WallCheckRadius: 0.1
   WhatIsWall:
@@ -5048,7 +5048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5a9498885ddbf468b9a950d484aae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level1Manager: {fileID: 0}
+  Level1Manager: {fileID: 2129131987}
 --- !u!1 &372615095
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,7 +5143,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5172,7 +5172,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
 --- !u!4 &412069267
 Transform:
   m_ObjectHideFlags: 0
@@ -5196,7 +5196,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -5321,7 +5321,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 480743135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.52, y: -3.73, z: -0.024129}
+  m_LocalPosition: {x: 1.52, y: -0.78, z: -0.024129}
   m_LocalScale: {x: 5.348046, y: 5.3480434, z: 5.3480434}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5338,7 +5338,6 @@ GameObject:
   - component: {fileID: 887693199}
   - component: {fileID: 887693198}
   - component: {fileID: 887693197}
-  - component: {fileID: 887693201}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5422,19 +5421,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &887693201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 887693196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a76889b0fc470a47b3706a716c4db62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FirePoint: {fileID: 0}
-  Projectile: {fileID: 0}
 --- !u!1 &1065948804
 GameObject:
   m_ObjectHideFlags: 0
@@ -5633,9 +5619,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  PC: {fileID: 2129131984}
+  Jimmy: {fileID: 0}
   EnemyDeath: {fileID: 331840306}
-  ProjectileParticle: {fileID: 0}
+  ProjectileParticle: {fileID: 170149049}
   PointsForKill: 5
 --- !u!1 &1174994842
 GameObject:
@@ -5896,7 +5882,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6045,7 +6031,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6074,7 +6060,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
 --- !u!4 &1489485461
 Transform:
   m_ObjectHideFlags: 0
@@ -6098,7 +6084,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -10801,7 +10787,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1740637501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: -3.73, z: -0.024129}
+  m_LocalPosition: {x: -0.27, y: -0.88, z: -0.024129}
   m_LocalScale: {x: 5.348046, y: 5.3480434, z: 5.3480434}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11114,7 +11100,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2008030753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.85, y: -3.73, z: -0.024129}
+  m_LocalPosition: {x: -3.85, y: -1.29, z: -0.024129}
   m_LocalScale: {x: 5.348046, y: 5.3480434, z: 5.3480434}
   m_Children: []
   m_Father: {fileID: 0}

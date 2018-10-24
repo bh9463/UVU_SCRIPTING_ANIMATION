@@ -13,15 +13,10 @@ public class Loops : MonoBehaviour {
 			//print(i + "Ants Marching");
 
 		//}
-		while(Num >= 0){
-			print("Countdown" + Num);
-			Num --;
-
-
-		}
-	
-	
-	
+		//while(Num >= 0){
+			//print("Countdown" + Num);
+			//Num --;
+		//}
 	}
 	
 	// Update is called once per frame
