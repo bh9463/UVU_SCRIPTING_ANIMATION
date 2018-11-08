@@ -34,7 +34,12 @@ public class Projectile : MonoBehaviour {
 				ScoreManager.AddPoints (PointsForKill);
 			}
 
-			// This is the particle and death effect for the projectile itself for any instance. 
+			//projectile delay on the projectile getting destroyed. destroy delay timer 
+			Destroy (gameObject, 5);
+		}
+
+		void OnCollisionEnter2D(Collision2D other){
+			
 			Instantiate(ProjectileParticle, transform.position, transform.rotation);
 			Destroy (gameObject);
 		}

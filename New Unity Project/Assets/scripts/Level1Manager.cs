@@ -5,7 +5,9 @@ using UnityEngine;
 public class Level1Manager : MonoBehaviour {
 
 	public GameObject CurrentCheckPoint;
-	public Rigidbody2D Player;
+	public Rigidbody2D Jimmy;
+
+	public GameObject Jimmy2;
 
 	//Death and respawn animation effect
 	public GameObject DeathParticle;
@@ -28,34 +30,36 @@ public class Level1Manager : MonoBehaviour {
 	//Co Routine means a cycle that can happen multiple times that is activated multiple times by the player 
 	//for example, you won't have a respawn timer unless you die. When you die, you have the same amount of time
 	//or it's a cycle that can be interrupted 
-	public void RespawnPlayer(){
-		StartCoroutine ("RespawnPlayerCo");
+	public void RespawnJimmy(){
+		StartCoroutine ("RespawnJimmyCo");
 	}
 
-	public IEnumerator RespawnPlayerCo(){
+	public IEnumerator RespawnJimmyCo(){
 		//instantiate is used to initiate effects or triggers
 		//Generate Death Particle
 		//This allows for the effect to happen wherever the character dies
-		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
+		Instantiate (DeathParticle, Jimmy.transform.position, Jimmy.transform.rotation);
+		Jimmy2.SetActive(false);
 		//Hide Player
 		//player.enabled = false;
-		Player.GetComponent<Renderer> ().enabled = false;
+		Jimmy.GetComponent<Renderer> ().enabled = false;
 		//This is the Store Gravity in use, resetting the gravity
-		GravityStore = Player.GetComponent<Rigidbody2D>().gravityScale;
-		Player.GetComponent<Rigidbody2D>().gravityScale = 0f;
-		Player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		GravityStore = Jimmy.GetComponent<Rigidbody2D>().gravityScale;
+		Jimmy.GetComponent<Rigidbody2D>().gravityScale = 0f;
+		Jimmy.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		//Point Death Penalty
 		ScoreManager.AddPoints(-PointPenaltyOnDeath);
 		//Respawn Text Message on screen
-		Debug.Log("Player Respawn");
+		Debug.Log("Jimmy Respawn");
 		//Respawn dealay timer
 		yield return new WaitForSeconds (RespawnDelay);
 		//gavity restore
-		Player.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
+		Jimmy.GetComponent<Rigidbody2D>().gravityScale = GravityStore;
 		//take player back to last checkpoint
-		Player.transform.position = CurrentCheckPoint.transform.position;
-
-		Player.GetComponent<Renderer> ().enabled = true;
+		Jimmy.transform.position = CurrentCheckPoint.transform.position;
+		Jimmy2.SetActive(true);
+		//re applying the same character back to original state
+		Jimmy.GetComponent<Renderer> ().enabled = true;
 		//spawn particle effect initiate
 		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
 
