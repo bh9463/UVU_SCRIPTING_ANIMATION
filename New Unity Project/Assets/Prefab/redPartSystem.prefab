@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4665311661606552}
   - component: {fileID: 198469659980790598}
   - component: {fileID: 199536629489453862}
+  - component: {fileID: 114925843278270566}
   m_Layer: 0
   m_Name: redPartSystem
   m_TagString: Untagged
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -180, y: -90, z: 89.99999}
+--- !u!114 &114925843278270566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1459785700700150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61bc474510696249a3d5fa729e3cbc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198469659980790598
 ParticleSystem:
   m_ObjectHideFlags: 1
