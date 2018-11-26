@@ -12,7 +12,7 @@ public class Ammo : MonoBehaviour{
 	void Start () {
 		AmmoQuantityText = GetComponent<Text>();
 
-		AmmoQuantity = 0;
+		AmmoQuantity = 15;
 		
 	}
 	
