@@ -3,7 +3,14 @@ guid: b3cf98eaeb07e2441a3edda8aea02536
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - CurrentCheckPoint: {instanceID: 0}
+  - Jimmy: {instanceID: 0}
+  - Jimmy2: {instanceID: 0}
+  - DeathParticle: {fileID: 1459785700700150, guid: be072846c5eafc342a82c479e09d3883,
+      type: 2}
+  - RespawnParticle: {fileID: 1549754717182078, guid: 39ffb9107c526eb4d9ee2513fa5ad901,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
