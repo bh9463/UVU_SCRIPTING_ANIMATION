@@ -1,21 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
-public class KillPlayer : MonoBehaviour {
+public class HurtPlayer : MonoBehaviour {
 
-	public Level1Manager Level1Manager;
+	public int damageToGive;
 
-	
-
-	// populating it 
 	void Start () {
-		Level1Manager = FindObjectOfType <Level1Manager>();
+
 	}
-	
+
+
+	void Update () {
+
+	}
+
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.name == "Jimmy"){
-			Level1Manager.RespawnJimmy();
+			HealthManager.HurtPlayer(damageToGive);
 			}
 		
 

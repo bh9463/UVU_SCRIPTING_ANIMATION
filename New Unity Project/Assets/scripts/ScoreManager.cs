@@ -13,6 +13,8 @@ public class ScoreManager : MonoBehaviour {
 
 	public Text WinText;
 
+
+
 	// Use this for initialization
 	void Start () {
 		ScoreText = GetComponent<Text>();
@@ -21,6 +23,7 @@ public class ScoreManager : MonoBehaviour {
 		Score = 0;
 
 		WinText.GetComponent<Text>().enabled = false;	
+		
 	}
 	
 	// Update is called once per frame
@@ -36,6 +39,7 @@ public class ScoreManager : MonoBehaviour {
 			WinText.GetComponent<Text>().enabled = true;
 			Time.timeScale = 0;
 		}
+
 		// if player hits the escape key return to start menu
 		if(Input.GetKeyDown(KeyCode.Escape)){
 			SceneManager.LoadScene(0);

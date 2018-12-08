@@ -22,9 +22,13 @@ public class Level1Manager : MonoBehaviour {
 	// Store Gravity means reseting the gravity after you die so you don't just die again
 	private float GravityStore;
 
+	public HealthManager healthManager;
+
 
 	//Beginning of game, happens once
 	void Start () {
+
+		healthManager = FindObjectOfType<HealthManager>();
 		//player = FindObjectOfType<Rigidbody2D> ();
 	}
 	//Co Routine means a cycle that can happen multiple times that is activated multiple times by the player 
@@ -59,6 +63,8 @@ public class Level1Manager : MonoBehaviour {
 		Jimmy.transform.position = CurrentCheckPoint.transform.position;
 		Jimmy2.SetActive(true);
 		//re applying the same character back to original state
+		// healthManager.FullHealth();
+		healthManager.isDead = false;
 		Jimmy.GetComponent<Renderer> ().enabled = true;
 		//spawn particle effect initiate
 		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);

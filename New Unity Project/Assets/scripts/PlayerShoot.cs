@@ -6,6 +6,7 @@ public class PlayerShoot : MonoBehaviour {
 
 	public Transform FirePoint;
 	public GameObject Projectile;
+	public int AmmoQuantity;
 
 
 	void Start () {
@@ -16,7 +17,12 @@ public class PlayerShoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.RightControl))
-			Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
+
+			if(1 == 1){
+				Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
+				AmmoQuantity -= 1;
 
 	}
+}
+
 }
