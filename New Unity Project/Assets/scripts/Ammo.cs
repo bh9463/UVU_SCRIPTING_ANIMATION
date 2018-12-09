@@ -45,7 +45,7 @@ public class Ammo : MonoBehaviour{
 		//ScoreManager.AddPoints (PointsToAdd);
 		AmmoQuantity += 1;
 
-		Destroy (gameObject);
+		// Destroy (gameObject);
 	}	
 
 }
