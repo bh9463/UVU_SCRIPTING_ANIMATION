@@ -9,6 +9,7 @@ public class CharacterMove : MonoBehaviour {
 	public int MoveSpeed; 
 	public float JumpHeight; 
 	private bool doubleJump;
+	
 
 	// Player grounded variables
 	public Transform GroundCheck;
@@ -44,6 +45,7 @@ public class CharacterMove : MonoBehaviour {
 			Jump();
 			doubleJump = true;
 	}
+	
 
 	moveVelocity = 0f;
 
@@ -69,6 +71,7 @@ public class CharacterMove : MonoBehaviour {
 
 
 }
+
 
 public void Jump(){
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpHeight);

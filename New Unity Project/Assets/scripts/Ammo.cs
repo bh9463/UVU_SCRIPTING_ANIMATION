@@ -4,6 +4,8 @@ using System.Collections;
 
 public class Ammo : MonoBehaviour{ 	
 
+	
+
 	public static int AmmoQuantity;
 
 	public int PointsToAdd;
@@ -14,32 +16,31 @@ public class Ammo : MonoBehaviour{
 	void Start () {
 		AmmoQuantityText = GetComponent<Text>();
 
-		AmmoQuantity = 0;
+		AmmoQuantity = 20;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if (AmmoQuantity < 0)
 			AmmoQuantity = 0;
 		AmmoQuantityText.text = " " + AmmoQuantity;
 
-
 		if(Input.GetKeyDown(KeyCode.T)){
 			AmmoQuantity += 1;
 		}
+		if(Input.GetKeyDown(KeyCode.RightControl)){
+			AmmoQuantity -=1;
+			AmmoQuantityText.GetComponent<Text> ().text = AmmoQuantity.ToString();
+		}
+		
 		
 	}
 
-	public static void AddPoints (int PointsToAdd) {
-		AmmoQuantity += PointsToAdd;
-	}
-
-
-
 	void OnTriggerEnter2D (Collider2D other){
-		if (other.GetComponent<Rigidbody2D> () == null)
-			return;
+	 	if (other.GetComponent<Rigidbody2D> () == null)
+	 		return;
 
 		//ScoreManager.AddPoints (PointsToAdd);
 		AmmoQuantity += 1;

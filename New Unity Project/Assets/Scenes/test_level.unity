@@ -444,7 +444,7 @@ Prefab:
         type: 2}
       propertyPath: ProjectileParticle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1464759934}
     - target: {fileID: 1116903695561442, guid: ee1f62fc23b6e24459796826800ac5c7, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -1586,6 +1586,7 @@ GameObject:
   - component: {fileID: 511248333}
   - component: {fileID: 511248332}
   - component: {fileID: 511248335}
+  - component: {fileID: 511248336}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -1676,6 +1677,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointsToAdd: 0
+--- !u!114 &511248336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 511248330}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a76889b0fc470a47b3706a716c4db62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirePoint: {fileID: 0}
+  Projectile: {fileID: 0}
+  AmmoQuantity: 0
+  Ammo: 0
 --- !u!1001 &520389743
 Prefab:
   m_ObjectHideFlags: 0
@@ -2606,7 +2622,8 @@ MonoBehaviour:
   CurrentCheckPoint: {fileID: 1982324107}
   Jimmy: {fileID: 2129131984}
   Jimmy2: {fileID: 2129131981}
-  DeathParticle: {fileID: 1464759934}
+  DeathParticle: {fileID: 1459785700700150, guid: be072846c5eafc342a82c479e09d3883,
+    type: 2}
   RespawnParticle: {fileID: 1706497471}
   RespawnDelay: 1
   PointPenaltyOnDeath: 10
@@ -8508,6 +8525,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1998709348330776, guid: fe93dcecae5f9a048874855e8229004d, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe93dcecae5f9a048874855e8229004d, type: 2}
   m_IsPrefabAsset: 0
@@ -9165,7 +9186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cd16f9b4cc7194487563aabc099583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointsToAdd: 1
+  PointsToAdd: 0
 --- !u!114 &1938336873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9180,6 +9201,7 @@ MonoBehaviour:
   FirePoint: {fileID: 0}
   Projectile: {fileID: 0}
   AmmoQuantity: 0
+  Ammo: 0
 --- !u!1 &1982324107
 GameObject:
   m_ObjectHideFlags: 0
@@ -9279,6 +9301,16 @@ Prefab:
         type: 2}
       propertyPath: JumpHeight
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114062206601504238, guid: 5c06c0bb3d53891419f0ed14f95b5004,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114495573345900100, guid: 5c06c0bb3d53891419f0ed14f95b5004,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c06c0bb3d53891419f0ed14f95b5004, type: 2}
@@ -9464,3 +9496,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 0
+--- !u!114 &2129131989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2129131981}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18cd16f9b4cc7194487563aabc099583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointsToAdd: 0

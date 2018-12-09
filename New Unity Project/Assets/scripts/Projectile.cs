@@ -13,6 +13,8 @@ public class Projectile : MonoBehaviour {
 
 	public int PointsForKill;
 
+	
+
 	// Use this for initialization
 	void Start () {
 
@@ -32,6 +34,7 @@ public class Projectile : MonoBehaviour {
 				Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
 				Destroy (other.gameObject);
 				ScoreManager.AddPoints (PointsForKill);
+				
 			}
 
 			//projectile delay on the projectile getting destroyed. destroy delay timer 
